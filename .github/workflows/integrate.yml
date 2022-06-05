@@ -14,8 +14,7 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # The "build" workflow
-  build:
+  integrate:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -30,18 +29,11 @@ jobs:
         with:
           go-version: "1.18.1" # The Go version to download (if necessary) and use.
 
-      - name: Setup golangci-lint
-        uses: golangci/golangci-lint-action@v3
-        with:
-          # Optional: version of golangci-lint to use in form of v1.2 or v1.2.3 or `latest` to use the latest version
-          version: v1.29
-
       # Run vet & lint on the code
-      - name: Run fmt & vet & lint
+      - name: Run fmt & vet
         run: |
           go fmt .
           go vet .
-          golangci-lint .
 
       # Run testing on the code
       - name: Run testing
