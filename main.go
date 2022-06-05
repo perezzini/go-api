@@ -10,7 +10,7 @@ func main() {
 
 	/* Setup services */
 	router.GET("/books", services.GetBooks)
-	router.POST("books", services.CreateBook)
+	router.POST("/books", services.CreateBook)
 	router.GET("/books/:id", services.BookById)
 	router.PATCH("/books/:id/checkout", services.CheckoutBook)
 	router.PATCH("/books/:id/return", services.ReturnBook)
