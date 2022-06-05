@@ -1,5 +1,7 @@
 # Dummy API in Golang language
 
+[![CI](https://github.com/perezzini/go-api/actions/workflows/integrate.yml/badge.svg)](https://github.com/perezzini/go-api/actions/workflows/integrate.yml)
+
 Just for exercising Golang fundaments.
 
 API implemented using the [Gin](https://github.com/gin-gonic/gin) framework.
